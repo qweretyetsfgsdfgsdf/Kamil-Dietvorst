@@ -4,19 +4,27 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
 import {
-  SiGo,
-  SiKubernetes,
-  SiElixir,
-  SiPostgresql,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
   SiTypescript,
+  SiTailwindcss,
+  SiBootstrap,
+  SiJquery,
+  SiPhp,
+  SiLaravel,
+  SiSymfony,
+  SiCodeigniter,
   SiAmazonaws,
   SiGooglecloud,
+  SiPostgresql,
   SiTerraform,
   SiReact,
   SiNextdotjs,
-  SiPython,
+  SiMysql,
   SiGraphql,
 } from 'react-icons/si';
+import { DiYii } from 'react-icons/di';
 import { getPosts, Post } from '@posts';
 import { TransparentLink } from '@components';
 
@@ -26,16 +34,52 @@ interface AboutProps {
 
 const stacks = [
   {
-    Icon: SiGo,
-    url: 'https://golang.org/',
+    Icon: SiHtml5,
+    url: 'https://www.Html5.org/',
   },
   {
-    Icon: SiKubernetes,
-    url: 'https://kubernetes.io/',
+    Icon: SiCss3,
+    url: 'https://www.Css3.org/',
+  },
+  {
+    Icon: SiJavascript,
+    url: 'https://www.SiJavascriptlang.org/',
   },
   {
     Icon: SiTypescript,
     url: 'https://www.typescriptlang.org/',
+  },
+  {
+    Icon: SiTailwindcss,
+    url: 'https://www.Tailwindcss.org/',
+  },
+  {
+    Icon: SiBootstrap,
+    url: 'https://www.Bootstrap.org/',
+  },
+  {
+    Icon: SiJquery,
+    url: 'https://www.Jquery.org/',
+  },
+  {
+    Icon: SiPhp,
+    url: 'https://www.Php.org/',
+  },
+  {
+    Icon: SiLaravel,
+    url: 'https://www.Laravel.org/',
+  },
+  {
+    Icon: SiSymfony,
+    url: 'https://www.Symfony.org/',
+  },
+  {
+    Icon: SiCodeigniter,
+    url: 'https://www.Codeigniter.org/',
+  },
+  {
+    Icon: DiYii,
+    url: 'https://www.Yii.org/',
   },
   {
     Icon: SiReact,
@@ -54,24 +98,12 @@ const stacks = [
     url: 'https://nextjs.org/',
   },
   {
-    Icon: SiElixir,
-    url: 'https://elixir-lang.org/',
-  },
-  {
-    Icon: SiGooglecloud,
-    url: 'https://cloud.google.com/',
-  },
-  {
-    Icon: SiTerraform,
-    url: 'https://www.terraform.io/',
-  },
-  {
     Icon: SiPostgresql,
     url: 'https://www.postgresql.org/',
   },
   {
-    Icon: SiPython,
-    url: 'https://www.python.org/',
+    Icon: SiMysql,
+    url: 'https://www.mysql.org/',
   },
 ];
 
@@ -82,15 +114,16 @@ const About = ({ experiences }: AboutProps): JSX.Element => (
     </Head>
     <Container alignContent="center" alignItems="center">
       <Title fontSize={['3rem', '4rem']} as="h2">
-        CTO & passionate
+        Full Stack Developer
       </Title>
       <Container maxWidth={['100%', '720px']} marginY="2rem">
-        <Text>I&apos;m a Full-Stack/DevOps developer living in Paris.</Text>
+        <Text>Hello! I&apos;m a seasoned Full-Stack developer living in Amsterdam.</Text>
         <Text>
-          During my free time I like going gym, doing Bench Press, make design
-          and make video edits on After Effects. You can check some cool drone
-          edits on my&nbsp;
-          <a href="https://instagram.com/croissant2france">Instagram</a>.
+          My journey in the world of technology has been a thrilling adventure, where each day brings new challenges and opportunities for growth.  In the dynamic realm of software development, I thrive on the constant evolution of technologies and methodologies. From architecting robust backend systems to crafting pixel-perfect frontend experiences, I've immersed myself in the intricacies of the full development stack.
+          Beyond the lines of code, you'll often find me embracing the rhythm of daily life. Whether it's diving into the latest tech trends, collaborating with talented teams, or finding inspiration in the great outdoors, I believe in a holistic approach to personal and professional growth.  I am passionate about creating solutions that not only meet technical requirements but also enhance user experiences.   
+          My commitment to excellence is fueled by a genuine love for problem-solving and a dedication to staying at the forefront of industry advancements.
+          During my free time I like going gym, doing Bench Press, make design and make video edits on After Effects.
+          Let's connect and explore the endless possibilities that technology and life have to offer!
         </Text>
       </Container>
     </Container>

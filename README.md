@@ -1,11 +1,11 @@
-# [shellbear.me](https://shellbear.me/)
+# [KâmilDietvorst](https://KâmilDietvorst/)
 
 Source code of my personal website & blog ✨
 
-Check the live version [here](https://shellbear.me/) ⚡️
+Check the live version [here](https://KâmilDietvorst/) ⚡️
 
-[![home](.github/img/home.png)](https://shellbear.me/)
-[![blog](.github/img/blog.png)](https://shellbear.me/)
+[![home](.github/img/home.png)](https://KâmilDietvorst/)
+[![blog](.github/img/blog.png)](https://KâmilDietvorst/)
 
 ## ✨ Features
 

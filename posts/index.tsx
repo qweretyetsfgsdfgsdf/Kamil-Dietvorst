@@ -1,5 +1,4 @@
 import fs from 'fs';
-import glob from 'fast-glob';
 import path from 'path';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
@@ -15,30 +14,64 @@ export interface Post {
 }
 
 const getPosts = async (dir: string): Promise<Post[]> => {
-  const contentGlob = path.join(path.join(baseDir, dir), '/*.mdx');
-  const files = glob.sync(contentGlob);
+  const baseUrl = path.join(path.join(baseDir, dir), '/');
 
-  return Promise.all(
-    files.map(async (file) => {
-      const basename = path.basename(file);
-      const slug = basename.replace('.mdx', '');
-      const raw = fs.readFileSync(file, 'utf8');
-      const { data, content } = matter(raw);
+  if (dir == "projects") {
+    const projects = [
+        "RabbitMart",
+        "TalkEasy",
+        "LMS",
+        "BoxShop",
+    ];
+    return Promise.all(
+      projects.map(async (project) => {
+        const baseName = project + '.mdx';
+        const slug = baseName.replace('.mdx', '');
+        const raw = fs.readFileSync(baseUrl + baseName, 'utf8');
+        const { data, content } = matter(raw);
+  
+        data.slug = slug;
+  
+        if (data.image) {
+          const { base64 } = await getPlaiceholder(data.image);
+          data.blurImage = base64;
+        }
+  
+        const source = await serialize(content, {
+          scope: data,
+        });
+  
+        return { data, content: content.trim(), source };
+      }),
+    );
+  }
 
-      data.slug = slug;
+  else {
+      const experiences = [ "Mavlers", "Scalo", "Wiserbrand", "S-PRO" ];
+      return Promise.all(
+        experiences.map(async (experience) => {
 
-      if (data.image) {
-        const { base64 } = await getPlaiceholder(data.image);
-        data.blurImage = base64;
-      }
+        const baseName = experience + '.mdx';
+        const slug = baseName.replace('.mdx', '');
+        const raw = fs.readFileSync(baseUrl + baseName, 'utf8');
+        const { data, content } = matter(raw);
 
-      const source = await serialize(content, {
-        scope: data,
-      });
+        data.slug = slug;
+  
+        if (data.image) {
+          const { base64 } = await getPlaiceholder(data.image);
+          data.blurImage = base64;
+        }
+  
+        const source = await serialize(content, {
+          scope: data,
+        });
 
-      return { data, content: content.trim(), source };
-    }),
-  );
+        return { data, content: content.trim(), source };
+
+      }),
+    );
+  }
 };
 
 export { getPosts };

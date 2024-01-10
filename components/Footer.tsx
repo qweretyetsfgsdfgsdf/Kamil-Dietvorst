@@ -31,7 +31,7 @@ const FooterGrid = styled.div`
 
 const links = [
   {
-    url: 'https://github.com/shellbear',
+    url: 'https://github.com/olaf926',
     icon: SiGithub,
   },
   {
@@ -39,7 +39,7 @@ const links = [
     icon: SiTwitter,
   },
   {
-    url: 'mailto:hello@shellbear.me',
+    url: 'mailto:hello@KâmilDietvorst',
     icon: MdMail,
   },
   {
@@ -63,7 +63,7 @@ const Footer = (): JSX.Element => (
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
         <Link href="/projects">Projects</Link>
-        <Link href="mailto:hello@shellbear.me">Contact</Link>
+        {/* <Link href="mailto:hello@peterkooistra">Contact</Link> */}
       </Grid>
     </Container>
     <FooterGrid>
@@ -74,7 +74,7 @@ const Footer = (): JSX.Element => (
       ))}
     </FooterGrid>
     <Text margin={0} fontSize="0.9rem" color="rgba(0, 0, 0, 0.7)">
-      © Antoine Ordonez 2018 → {new Date().getFullYear()}
+      © Kâmil Dietvorst 2018 → {new Date().getFullYear()}
     </Text>
   </StyledFooter>
 );
