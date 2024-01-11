@@ -1,4 +1,4 @@
-# [KâmilDietvorst](https://KâmilDietvorst/)
+# [Kâmil Dietvorst]
 
 Source code of my personal website & blog ✨
 
