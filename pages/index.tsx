@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 import { Container, Title, Button, Grid, Link, Text } from '@components';
 import styles from '@styles/Home.module.css';
 
-const Home = (): JSX.Element => (
+const src = "/me.png";
+
+const Home = () => (
   <Container>
     <Container
       justifyContent="center"
@@ -16,37 +17,37 @@ const Home = (): JSX.Element => (
       paddingBottom="40px"
       gridGap="4rem"
     >
-      <Container alignItems="center" alignContent="center">
-        <Image
-          src="/me.webp"
-          alt="Kâmil Dietvorst"
-          width={120}
-          height={120}
-          objectFit="cover"
-          className={styles.image}
-        />
-        <Title>Kâmil Dietvorst</Title>
-        <Title
-          fontSize="2rem"
-          color="rgba(0, 0, 0, 0.6)"
-          fontWeight="500"
-          as="h2"
-        >
-          I build web application.
-        </Title>
-      </Container>
-      <Container maxWidth="700px" gridGap="3rem">
-        <Container>
-          <Text textAlign="center">
-            I&apos;m a Full Stack developer with experience in Backend,
-            Frontend and mobile development.
-          </Text>
-        </Container>
-        <Link href="/about">
-          <Button>More about me &rarr;</Button>
-        </Link>
-      </Container>
+    <Container alignItems="center" alignContent="center">
+      <img
+        src={src}
+        alt="Kâmil Dietvorst"
+        width={120}
+        height={120}
+        //objectFit="cover"
+        className={styles.image}
+      />
+      <Title>Kâmil Dietvorst</Title>
+      <Title
+        fontSize="2rem"
+        color="rgba(0, 0, 0, 0.6)"
+        fontWeight="500"
+        as="h2"
+      >
+        I build web application.
+      </Title>
     </Container>
+    <Container maxWidth="700px" gridGap="3rem">
+      <Container>
+        <Text textAlign="center">
+          I&apos;m a Full Stack developer with experience in Backend,
+          Frontend and mobile development.
+        </Text>
+      </Container>
+      <Link href="/about">
+        <Button>More about me &rarr;</Button>
+      </Link>
+    </Container>
+  </Container>
 
     {/* <Container alignItems="center" paddingY="4rem">
       <Container maxWidth="600px" alignItems="center" alignContent="center">

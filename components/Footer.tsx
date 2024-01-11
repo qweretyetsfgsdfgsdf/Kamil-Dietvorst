@@ -31,27 +31,27 @@ const FooterGrid = styled.div`
 
 const links = [
   {
-    url: 'https://github.com/olaf926',
+    url: 'https://github.com/qweretyetsfgsdfgsdf',
     icon: SiGithub,
   },
   {
-    url: 'https://twitter.com/_shellbear',
+    url: '',
     icon: SiTwitter,
   },
   {
-    url: 'mailto:hello@KâmilDietvorst',
+    url: 'crypto.engineer216@gmail.com',
     icon: MdMail,
   },
   {
-    url: 'https://www.malt.fr/profile/antoineordonez',
+    url: '',
     icon: Malt,
   },
   {
-    url: 'https://linkedin.com/in/antoine-ordonez',
+    url: '',
     icon: SiLinkedin,
   },
   {
-    url: 'https://instagram.com/croissant2france',
+    url: '',
     icon: Instagram,
   },
 ];
